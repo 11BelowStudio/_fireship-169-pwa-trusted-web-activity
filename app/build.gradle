@@ -17,37 +17,52 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    signingConfigs {
+        release {
+        storeFile file('C:\\Users\\Rachel\\.android\\debug.keystore')
+        }
+    }
+    compileSdkVersion 32
     defaultConfig {
-        applicationId "io.fireship.app"
-        minSdkVersion 16
-        targetSdkVersion 28
-        versionCode 2
-        versionName "1.1"
+        applicationId "io.github.iibelowstudio.blackpoolpigeon"
+        minSdkVersion 21
+        targetSdkVersion 32
+        versionCode 1
+        versionName '0.0.1'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [
                 // The hostname is used when building the intent-filter, so the TWA is able to
                 // handle Intents to open https://svgomg.firebaseapp.com.
-                hostName: "fireship.io",
-                defaultUrl: "https://fireship.io",
-                launcherName: "Fireship",
+                hostName: "today.blackpoolpleasurebeach.com",
+                defaultUrl: "https://today.blackpoolpleasurebeach.com",
+                launcherName: "LegitBlackpool",
                 // This variable below expresses the relationship between the app and the site,
                 // as documented in the TWA documentation at
                 // https://developers.google.com/web/updates/2017/10/using-twa#set_up_digital_asset_links_in_an_android_app
                 // and is injected into the AndroidManifest.xml
                 assetStatements: '[{ "relation": ["delegate_permission/common.handle_all_urls"], ' +
-                        '"target": {"namespace": "web", "site": "https://fireship.io"}}]'
+                        '"target": {"namespace": "web", "site": "https://today.blackpoolpleasurebeach.com"}}]'
         ]
+        multiDexEnabled false
+        versionNameSuffix '.a'
 
         // This attribute sets the status bar color for the TWA. It can be either set here or in
         // `res/values/colors.xml`. Setting in both places is an error and the app will not
         // compile. If not set, the status bar color defaults to #FFFFFF - white.
-        resValue "color", "colorPrimary", "#272838"
+
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            versionNameSuffix '.b'
+            multiDexEnabled false
+            signingConfig signingConfigs.release
+            applicationIdSuffix '.release'
         }
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -57,5 +72,11 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.github.GoogleChrome.custom-tabs-client:customtabs:e849e45c90'
+    implementation 'androidx.browser:browser:1.4.0'
+    implementation 'androidx.appcompat:appcompat-resources:1.4.1'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+
 }

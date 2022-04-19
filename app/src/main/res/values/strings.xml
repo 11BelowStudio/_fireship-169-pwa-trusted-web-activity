@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="twa_offline_first_preferences_file_key" translatable="false">twa_offline_first_preferences_file_key</string>
+    <string name="twa_launched_successfully" translatable="false">twa_launched_successfully</string>
+
+
+    <string name="app_title">Legit Blackpool Pleasure Beach App xd</string>
+    <string name="ur_offline">oh noes theres no internet</string>
+    <string name="retry">RETRY CONNECTION</string>
+
+    <string name="icon_credits">app icon lovingly nicked from\nhttps://commons.wikimedia.org/wiki/File:Blackpoll_Warbler_PJT.JPG</string>
+
+    <string name="app_info_title">A Totally Legit Blackpool Pleasure Beach App</string>
+    <string name="app_info_body">Bodged together by Rachel.\nSomehow, this app appears to work (when there\'s internet connectivity)</string>
+
+    <string name="ok">ok</string>
+
+</resources>

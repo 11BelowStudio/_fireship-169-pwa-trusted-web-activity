@@ -1,4 +1,6 @@
+# a totes legit blackpool pleasure beach web app thing i cobbled together for a friend whose phone is being uncooperative
 
+at least i can now say i've actually built an android app that works now.
 
 # PWA to Play Store | Trusted Web Activity
 

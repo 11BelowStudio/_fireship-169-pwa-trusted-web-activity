@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "https://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg height="128" width="128"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xml:space="preserve">
+    <style type="text/css">
+
+        <![CDATA[
+        text {
+            fill: #fafaf4;
+            transparent: transparent;
+            font: 'roboto';
+            font-family: 'roboto', sans-serif;
+            font-weight: bold;
+            stroke: black;
+            stroke-width: 0.5;
+            text-align: center;
+        }
+    ]]>
+    </style>
+    <!--
+    <rect x="0" y="0" width="128" height="128" fill="red"/>
+    -->
+    <text x="0" y="100" font-size="2.5em">blackpool</text>
+    <text x="5" y="120" font-size="1.5em">(legit)</text>
+</svg>
